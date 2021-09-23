@@ -1,6 +1,7 @@
-# Documentación Objetivo-0
-## Configuración git y github
-### Creación de par de claves y subida de clave pública a GitHub
+# Documentación del proyecto
+## Documentación Objetivo-0
+### Configuración git y github
+#### Creación de par de claves y subida de clave pública a GitHub
 Creamos las claves con el comando ssh-keygen.
 <p align="center"><img src="./Objetivo-0/ssh-keygen.png" width="800"></p>
 Como vemos, se nos crearon las claves git en el directorio "~/.ssh".
