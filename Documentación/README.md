@@ -6,7 +6,7 @@
 <p>Como vemos, se nos crearon las claves git en el directorio "~/.ssh".</p>
 <p align="center"><img src="./Objetivo-0/clavesSSH.png" width="800"></p>
 <p>Para configurar estas claves, vas a la configuración de github al apartado de "SSH and GPG keys" y añades la clave pública generada anteriormente.</p>
-<p align="center><img src="./Objetivo-0/claveEnGithub.png" width="800"></p>
+<p align="center><img src="./Objetivo-0/claveEnGithub.png"></p>
 <h3>Configuración correcta del nombre y correo electrónico para que aparezca en los commits correctamente</h3>
 <p>Configurar nombre.</p>
 <p align="center"><img src="./Objetivo-0/configurarNombre.png" width="800"></p>
