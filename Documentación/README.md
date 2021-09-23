@@ -1,4 +1,4 @@
-<h1>Documentación del proyecto</h1>
+<h1>Documentación adicional del proyecto</h1>
 <h2>Configuración git y github</h2>
 <h3>Creación de par de claves y subida de clave pública a GitHub</h3>
 <p>Creamos las claves con el comando ssh-keygen.</p>
