@@ -3,5 +3,5 @@
 <p>Aplicación web de tareas.</p>
 <h2>Descripción del problema</h2>
 <p>Me ha pasado muchas veces, sobre todo en la carrera, que quiero hacer muchas cosas en el día pero no me da tiempo a todo ya que no me organizo bien. Con esta aplicación quiero apuntar mis tareas diarias, así me dará tiempo a realizarlas y me sentiré más productivo.</p>
-<h2>Configuración</p>
-Lee la configuración [Aquí](Documentación/README.md)
+<h2>Configuración</h2>
+<p>Lee la configuración [Aquí](Documentación/README.md)</p>
