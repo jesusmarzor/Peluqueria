@@ -7,4 +7,6 @@
 <p>La aplicación hará una estadística semanal sobre cuanto tiempo tardas en cada tarea y la próxima vez que añadas esa tarea, te propondrá un tiempo mínimo para realizarla.</p>
 <p>Usará la <a href="https://blog.educalive.com/tecnica-pomodoro/">Técnica Pomodoro</a>, que consiste en realizar la tarea durante intervalos de 30 minutos (concentrase durante 25 minutos y descansar 5 minutos).</p>
 <h2>Documentación Adicional</h2>
-<p>Lee la documentación adicional <a href="./Documentación/README.md">aquí<a>
+<p>Lee la documentación adicional <a href="./docs/Objetivo-0/CONFIGURACION.md">aquí<a>
+<h2>Issues</h2>
+<p>Lee la parte de Issues <a href="./docs/Objetivo-1/ISSUES.md">aquí</a></p>
