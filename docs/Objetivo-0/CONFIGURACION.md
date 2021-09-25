@@ -1,8 +1,9 @@
-<h1>Documentación adicional del proyecto</h1>
-<h2>Configuración git y github</h2>
-<h3>Creación de par de claves y subida de clave pública a GitHub</h3>
-<p>Creamos las claves con el comando ssh-keygen.</p>
-<p align="center"><img src="./ssh-keygen.png" width="800"></p>
+# Documentación adicional del proyecto
+## Configuración git y github
+### Creación de par de claves y subida de clave pública a GitHub
+Creamos las claves con el comando ssh-keygen.
+
+![Claves](./ssh-keygen.png)
 <p>Como vemos, se nos crearon las claves git en el directorio "~/.ssh".</p>
 <p align="center"><img src="./clavesSSH.png" width="800"></p>
 <p>Para configurar estas claves, vas a la configuración de github al apartado de "SSH and GPG keys" y añades la clave pública generada anteriormente.</p>
