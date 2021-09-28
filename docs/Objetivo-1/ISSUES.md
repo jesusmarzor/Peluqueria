@@ -1,7 +1,9 @@
 # Issues
 ## Tipos de usuario
 **Cliente** - Persona que pide cita en el calendario para acudir a la empresa.
+
 **Trabajador** - Persona que trabaja en la empresa.
+
 **Gestor** - Persona encargada de evaluar la evolución de la empresa y tomar decisiones importantes.
 
 ## Historias de Usuario
