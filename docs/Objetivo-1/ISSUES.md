@@ -7,4 +7,4 @@
 **Gestor** - Persona encargada de evaluar la evolución de la empresa y tomar decisiones importantes.
 
 ## Historias de Usuario
-Estas [issues](https://github.com/jesusmarzor/Proyecto-IV/issues) nos proporcionan los objetivos a tener en cuenta para desarrollar nuestra aplicación. 
+[[HU1](https://github.com/jesusmarzor/Proyecto-IV/issues/3)] $\rightarrow$ Como cliente, quiero pedir la cita en el día y la hora que estén disponibles.
