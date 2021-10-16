@@ -1,3 +1,6 @@
+import { Product } from './Product'
+
+
 class Service{
 	#id;
 	#name;

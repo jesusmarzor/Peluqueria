@@ -1,3 +1,6 @@
+import { Day } from './Day'
+
+
 class Calendar {
 	#timetable;
 	#calendarSize;

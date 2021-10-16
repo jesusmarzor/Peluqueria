@@ -1,3 +1,6 @@
+import { Service } from './Service'
+
+
 class Franja{
 	#begin;
 	#end;

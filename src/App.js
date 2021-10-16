@@ -1,9 +1,15 @@
+import { Calendar } from './Calendar'
+import { Product } from './Product'
+import { Stock } from './Stock'
+
+
 class App{
 	#calendar;
+	#calendarsize = 60;
 	#storeroom;
 
 	constructor(){
-		this.#calendar = Calendar();
+		this.#calendar = Calendar(calendarsize);
 		this.#storeroom = [];
 	}
 
