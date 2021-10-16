@@ -1,4 +1,4 @@
-import { Day } from './Day'
+import { Day } from './Day';
 
 
 class Calendar {
@@ -20,3 +20,6 @@ class Calendar {
 
 	organizeNextBuy(){}
 }
+
+
+export { Calendar };

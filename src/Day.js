@@ -1,4 +1,4 @@
-import { Service } from './Service'
+import { Service } from './Service';
 
 
 class Franja{
@@ -52,3 +52,6 @@ class Day{
 	}
 
 }
+
+
+export { Day };

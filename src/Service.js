@@ -1,4 +1,4 @@
-import { Product } from './Product'
+import { Product } from './Product';
 
 
 class Service{
@@ -17,3 +17,6 @@ class Service{
 		this.#price = price;
 	}
 }
+
+
+export { Service };

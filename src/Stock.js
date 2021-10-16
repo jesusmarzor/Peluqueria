@@ -20,3 +20,6 @@ class Stock {
 		this.#quantity -= amount;
 	}
 }
+
+
+export { Stock };

@@ -7,3 +7,6 @@ class Product {
 		this.name = name;
 	}
 }
+
+
+export { Product };
