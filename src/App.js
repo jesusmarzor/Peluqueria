@@ -13,9 +13,9 @@ class App{
 	}
 
 	giveAppointment(service, date){}
-	cancelAppointment(service, date, name){}
+	cancelAppointment(service, date, customerName){}
 
-	addProduct(product, initialQuantity){}
+	addProduct(name, initialQuantity){}
 	removeProduct(productID){}
 
 	addStock(productID, amount){}
