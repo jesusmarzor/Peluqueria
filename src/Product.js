@@ -1,12 +1,15 @@
 class Product {
+	static #idCounter = 0;
 	#id;
 	#name;
 	#stock;
 
-	constructor(product, quantity){
-		this.#id = id;
+	constructor(name, stock){
+		this.#id = this.#idCounter;
 		this.#name = name;
 		this.#stock= stock;
+
+		this.#idCounter++;
 	}
 
 	addQuantity(amount){
