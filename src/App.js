@@ -1,6 +1,5 @@
 import { Calendar } from './Calendar'
 import { Product } from './Product'
-import { Stock } from './Stock'
 
 
 class App{
