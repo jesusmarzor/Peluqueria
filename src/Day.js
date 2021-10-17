@@ -1,7 +1,7 @@
 import { Service } from './Service';
 
 
-class Franja{
+class Stripe{
 	#begin;
 	#end;
 
@@ -12,29 +12,31 @@ class Franja{
 }
 
 
-class Turno{
+class Appointment{
 	#service;
 	#startTime;
+	#customerName;
 
-	constructor(service, startTime){
+	constructor(service, startTime, customerName){
 		this.#service = service;
 		this.#startTime = startTime;
+		this.#customerName = customerName;
 	}
 }
 
 
 class Day{
 	#date;
-	#turnos;
+	#appointments;
 
 	constructor(date){
 		this.#date = date;
 		dayOfTheWeek = date.getDay();
 
-		this.#turnos = []
+		this.#appointments = []
 		switch (dayOfTheWeek) {
 			case 'Lunes':
-				Horario = [Franja(18, 21)]
+				Horario = [Stripe(18, 21)]
 				break;
 				
 			case 'Martes':
@@ -42,7 +44,7 @@ class Day{
 			case 'Jueves':
 			case 'Viernes':
 			case 'Sabado':
-				Horario = [Franja(8,13), Franja(18, 21)]
+				Horario = [Stripe(8,13), Stripe(18, 21)]
 				break;
 			
 			case 'Domingo':
