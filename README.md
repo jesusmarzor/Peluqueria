@@ -10,11 +10,23 @@ Leer la documentación adicional [aquí](./docs/Objetivo-0/CONFIGURACION.md)
 ## Issues
 Leer el apartado de Issues [aquí](./docs/Objetivo-1/ISSUES.md)
 ## Comandos
-Ejecutar el proyecto.
+- **Start**
 ```
-npm start
+yarn start
 ```
-Ejecutar los tests
+- **Check**
 ```
-npm test
+yarn check
+```
+
+- **Clean**
+```
+yarn clean
+```
+
+- **Test**
+
+  Para ejecutar *test* es necesario instalar 'jest'.
+```
+yarn test
 ```
