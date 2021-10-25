@@ -12,22 +12,22 @@ Leer el apartado de Issues [aquí](./docs/Objetivo-1/ISSUES.md)
 ## Comandos
 - **Start**
 ```
-yarn start
+yarn run start
 ```
 
 - **Check**
 ```
-yarn check
+yarn run check
 ```
 
 - **Clean**
 ```
-yarn clean
+yarn run clean
 ```
 
 - **Test**
 
   Para ejecutar *test* es necesario instalar **jest**.
 ```
-yarn test
+yarn run test
 ```
