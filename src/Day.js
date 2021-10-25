@@ -20,7 +20,7 @@ class Day{
 
 	constructor(date){
 		this.#date = date;
-		dayOfTheWeek = date.getDay();
+		let dayOfTheWeek = date.getDay();
 
 		this.#appointments = []
 		switch (dayOfTheWeek) {
