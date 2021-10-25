@@ -8,7 +8,7 @@ class App{
 	#storeroom;
 
 	constructor(){
-		this.#calendar = Calendar(calendarsize);
+		this.#calendar = new Calendar(this.#calendarsize);
 		this.#storeroom = [];
 	}
 
