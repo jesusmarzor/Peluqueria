@@ -10,23 +10,45 @@ Leer la documentación adicional [aquí](./docs/Objetivo-0/CONFIGURACION.md)
 ## Issues
 Leer el apartado de Issues [aquí](./docs/Objetivo-1/ISSUES.md)
 ## Comandos
+<<<<<<< HEAD
 - **Start**
 ```
 yarn start
 ```
 - **Check**
+=======
+- Start
+```
+yarn start
+```
+- Check
+>>>>>>> Comandos añadidos
 ```
 yarn check
 ```
 
+<<<<<<< HEAD
 - **Clean**
+=======
+- Clean
+>>>>>>> Comandos añadidos
 ```
 yarn clean
 ```
 
+<<<<<<< HEAD
 - **Test**
 
   Para ejecutar *test* es necesario instalar 'jest'.
 ```
 yarn test
 ```
+=======
+- Test
+Para ejecutar el test es necesario instalar 'jest'.
+```
+yarn test
+```
+
+https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable
+>>>>>>> Comandos añadidos
