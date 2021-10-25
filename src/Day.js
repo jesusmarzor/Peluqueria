@@ -1,17 +1,6 @@
 import { Service } from './Service';
 
 
-class Stripe{
-	#begin;
-	#end;
-
-	constructor(begin, end){
-		this.#begin = begin;
-		this.#end = end;
-	}
-}
-
-
 class Appointment{
 	#service;
 	#startTime;
@@ -27,7 +16,7 @@ class Appointment{
 
 class Day{
 	#date;
-	#appointments;
+	#appointments = [];
 
 	constructor(date){
 		this.#date = date;
@@ -36,7 +25,7 @@ class Day{
 		this.#appointments = []
 		switch (dayOfTheWeek) {
 			case 'Lunes':
-				Horario = [Stripe(18, 21)]
+				Horario = {'18:00':false,'18:30':false,'19:00':false,'19:30':false,'20:00':false,'20:30':false}
 				break;
 				
 			case 'Martes':
@@ -44,7 +33,7 @@ class Day{
 			case 'Jueves':
 			case 'Viernes':
 			case 'Sabado':
-				Horario = [Stripe(8,13), Stripe(18, 21)]
+				Horario = {'08:00':false,'08:30':false,'09:00':false,'09:30':false,'10:00':false,'10:30':false,'11:00':false,'11:30':false,'12:00':false,'12:30':false,'18:00':false,'18:30':false,'19:00':false,'19:30':false,'20:00':false,'20:30':false}
 				break;
 			
 			case 'Domingo':
