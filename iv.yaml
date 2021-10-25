@@ -1,0 +1,7 @@
+lenguaje: javascript
+entidad:
+  - src/app.js
+automatizar:
+    fichero: package.json
+    orden: npm run
+
