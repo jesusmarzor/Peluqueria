@@ -27,7 +27,7 @@ yarn clean
 
 - **Test**
 
-  Para ejecutar *test* es necesario instalar 'jest'.
+  Para ejecutar *test* es necesario instalar **jest**.
 ```
 yarn test
 ```
