@@ -2,7 +2,7 @@ import { Day } from './Day';
 
 
 class Calendar {
-	#timetable;
+	#timetable = [];
 	#calendarSize;
 
 	constructor(calendarSize){
@@ -11,7 +11,7 @@ class Calendar {
 		let currentDate = (new Date());
 		for (let counter = 0; counter < calendarSize; counter++) {
 			currentDate.setDate(currentDate.getDate() + 1);
-			this.#timetable.push(Day(currentDate));
+			this.#timetable.push(new Day(currentDate));
 		}
 	}
 
