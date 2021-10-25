@@ -1,0 +1,23 @@
+{
+  "name": "peluqueria",
+  "version": "0.0.5",
+  "description": "[Proyecto IV] - Gestiona las citas y el almacén de una peluquería",
+  "main": "./src/app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusmarzor/Peluqueria.git"
+  },
+  "author": "Jesus Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusmarzor/Peluqueria/issues"
+  },
+  "homepage": "https://github.com/jesusmarzor/Peluqueria#readme"
+}
