@@ -9,10 +9,7 @@
   "scripts": {
     "start": "js ./src/app.js",
     "check": "yarn check",
-    "clean": "yarn autoclean",
-    "test": "jest"
-  },
-  "dependencies": {
-    "jest": "^27.3.1"
+    "clean": "yarn autoclean --init && yarn autoclean --force",
+    "test": "js ./src/app.js"
   }
 }
