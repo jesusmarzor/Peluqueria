@@ -31,9 +31,3 @@ yarn run check
 ```
 yarn run clean
 ```
-
-- **Test**
-
-```
-yarn run test
-```
