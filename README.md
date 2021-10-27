@@ -34,7 +34,6 @@ yarn run clean
 
 - **Test**
 
-  Para ejecutar *test* es necesario instalar **jest**.
 ```
 yarn run test
 ```
