@@ -9,7 +9,6 @@
   "scripts": {
     "start": "js ./src/app.js",
     "check": "yarn check",
-    "clean": "yarn autoclean --init && yarn autoclean --force",
-    "test": "js ./src/app.js"
+    "clean": "yarn autoclean --init && yarn autoclean --force"
   }
 }
