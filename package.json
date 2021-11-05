@@ -1,6 +1,6 @@
 {
   "name": "peluqueria",
-  "version": "0.0.8",
+  "version": "0.0.6",
   "description": "Proyecto para gestionar las citas y el almacen de una peluqueria (IV-21-22)",
   "main": "src/App.js",
   "directories": {
@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "js src/App.js",
+    "check": "necesita dependencias" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
