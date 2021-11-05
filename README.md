@@ -14,20 +14,20 @@ Leer el apartado de Herramientas [aquí](./docs/Objetivo-3/HERRAMIENTAS.md)
 ### Comandos
 - **Lista de comandos**
 ```
-yarn run
+npm run
 ```
 
 - **Start**
 ```
-yarn run start
+npm run start
 ```
 
 - **Check**
 ```
-yarn run check
+npm run check
 ```
 
-- **Clean**
+- **Test**
 ```
-yarn run clean
+npm run test
 ```
