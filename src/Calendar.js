@@ -1,25 +1,17 @@
-import { Day } from './Day';
-
-
+const Day = require('./Day');
 class Calendar {
-	#timetable = [];
-	#calendarSize;
-
 	constructor(calendarSize){
-		this.#calendarSize = calendarSize;
-
+		this.calendarSize = calendarSize;
+		this.timetable = [];
 		let currentDate = (new Date());
 		for (let counter = 0; counter < calendarSize; counter++) {
-			currentDate.setDate(currentDate.getDate() + 1);
-			this.#timetable.push(new Day(currentDate));
+			currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1));
+			this.timetable.push(new Day(currentDate));
 		}
 	}
-
-	giveAppointment(service, date){}
-	cancelAppointment(service, date){}
-
+	getTimetable(){
+		return this.timetable;
+	}
 	organizeNextBuy(){}
 }
-
-
-export { Calendar };
+module.exports = Calendar;
