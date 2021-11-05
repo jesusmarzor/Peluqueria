@@ -1,6 +1,6 @@
 lenguaje: javascript
 entidad:
-  - src/app.js
+  - src/App.js
 automatizar:
     fichero: package.json
     orden: yarn run
