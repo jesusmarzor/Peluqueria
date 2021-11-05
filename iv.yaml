@@ -3,5 +3,5 @@ entidad:
   - src/App.js
 automatizar:
     fichero: package.json
-    orden: yarn run
+    orden: npm run
 
