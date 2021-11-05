@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "js src/App.js",
-    "check": "necesita dependencias" ,
+    "check": "npm-check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jesusmarzor/Peluqueria/issues"
   },
-  "homepage": "https://github.com/jesusmarzor/Peluqueria#readme"
+  "homepage": "https://github.com/jesusmarzor/Peluqueria#readme",
+  "dependencies": {
+    "npm-check": "^5.9.2"
+  }
 }
