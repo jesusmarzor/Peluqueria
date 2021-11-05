@@ -23,11 +23,6 @@ npm run start
 npm run check
 ```
 
-- **Clean**
-```
-npm run check
-```
-
 - **Test**
 ```
 npm run test
