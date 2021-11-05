@@ -12,10 +12,6 @@ Leer el apartado de Issues [aquí](./docs/Objetivo-1/ISSUES.md)
 ## Herramientas
 Leer el apartado de Herramientas [aquí](./docs/Objetivo-3/HERRAMIENTAS.md) 
 ### Comandos
-- **Lista de comandos**
-```
-npm run
-```
 
 - **Start**
 ```
