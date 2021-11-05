@@ -1,14 +1,23 @@
 {
   "name": "peluqueria",
-  "version": "0.0.6",
-  "description": "[Proyecto IV] - Gestiona las citas y el almacén de una peluquería",
-  "main": "src/app.js",
-  "repository": "git@github.com:jesusmarzor/Peluqueria.git",
-  "author": "Jesus Martin Zorrilla <jesusmarzor28@gmail.com>",
-  "license": "MIT",
+  "version": "0.0.8",
+  "description": "Proyecto para gestionar las citas y el almacen de una peluqueria (IV-21-22)",
+  "main": "src/App.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "start": "js ./src/app.js",
-    "check": "yarn check",
-    "clean": "yarn autoclean --init && yarn autoclean --force"
-  }
+    "start": "js src/App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusmarzor/Peluqueria.git"
+  },
+  "author": "Jesus Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusmarzor/Peluqueria/issues"
+  },
+  "homepage": "https://github.com/jesusmarzor/Peluqueria#readme"
 }
