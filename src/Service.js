@@ -7,5 +7,11 @@ class Service{
 	getName(){
 		return this.name;
 	}
+	getConsumption(){
+		return this.consumption;
+	}
+	getPrice(){
+		return this.price;
+	}
 }
 module.exports = Service;

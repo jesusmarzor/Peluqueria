@@ -7,6 +7,12 @@ class Product {
 	getName(){
 		return this.name;
 	}
+	getStock(){
+		return this.stock;
+	}
+	getPrice(){
+		return this.price;
+	}
 	addQuantity(amount, price){
 		this.stock += amount;
 		this.price += price;
