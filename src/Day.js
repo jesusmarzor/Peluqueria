@@ -29,6 +29,9 @@ class Day{
 		let mes = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
         return this.date.getDate() + ' de ' + mes[this.date.getMonth()] + ' de ' + this.date.getFullYear()
     }
+	getDate(){
+		return this.date;
+	}
 	getAppointments(){
 		return this.appointments;
 	}
