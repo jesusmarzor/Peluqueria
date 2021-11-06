@@ -5,7 +5,7 @@ const Appointment = require('../../Peluqueria/src/Appointment')
 
 class App{
 	constructor(){
-		this.calendar = new Calendar(60);
+		this.calendar = new Calendar(new Date(new Date().getUTCFullYear(),(new Date().getMonth()+1),0).getDate());
 		this.products = [];
 		this.services = [];
 	}
@@ -25,12 +25,12 @@ class App{
 		return this.services;
 	}
 	giveAppointment(name, day, hour, service){
-        if(!day.hourReservated(hour)){
+        if(day.getDate() >= new Date() && !day.hourReservated(hour)){
             day['appointments'][hour] = new Appointment(name, service);
         }
     }
 	cancelAppointment(name,day,hour,service){
-        if(day.hourReservated(hour)){
+        if(day.getDate() >= new Date() && day.hourReservated(hour)){
             if(day['appointments'][hour].getCustomerName() == name && day['appointments'][hour].getService() == service){
                 day['appointments'][hour] = false;
             }
