@@ -9,3 +9,21 @@ Con esta aplicación web, ¡ este problema debería resolverse !
 Leer la documentación adicional [aquí](./docs/Objetivo-0/CONFIGURACION.md)
 ## Issues
 Leer el apartado de Issues [aquí](./docs/Objetivo-1/ISSUES.md)
+## Herramientas
+Leer el apartado de Herramientas [aquí](./docs/Objetivo-3/HERRAMIENTAS.md) 
+### Comandos
+
+- **Start**
+```
+npm run start
+```
+
+- **Check**
+```
+npm run check
+```
+
+- **Test**
+```
+npm run test
+```
