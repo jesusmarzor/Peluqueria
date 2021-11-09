@@ -21,8 +21,10 @@ class Day{
 		}
 	}
 	hourReservated(hour){
-        if(!this.hours[hour]){
-            return false
+        if(this.work_hours.includes(hour)){
+			if(this.getAppointment(hour) === undefined){
+				return false
+			}
         }
         return true
     }
@@ -30,7 +32,25 @@ class Day{
 		let mes = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
         return this.date.getDate() + ' de ' + mes[this.date.getMonth()] + ' de ' + this.date.getFullYear()
     }
-	getHours(){
-		return this.hours;
+	getDate(){
+		return this.date;
+	}
+	getAppointment(hour){
+		let appointmentSelect = undefined;
+		this.appointments.map( appointment => {
+			if(appointment.getHour() === hour){
+				appointmentSelect = appointment;
+			}
+		})
+		return appointmentSelect;
+	}
+	addAppointment(appointment){
+		this.appointments.push(appointment);
+	}
+	cancelAppointment(index){
+		this.appointments.splice(index,1);
+	}
+	getAppointments(){
+		return this.appointments;
 	}
 }
