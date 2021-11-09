@@ -1,9 +1,17 @@
 class Appointment{
-	constructor(service, day, hour, customerName){
+	constructor(customerName, service, hour){
+		this.customerName = customerName;
 		this.service = service;
 		this.hour = hour;
-		this.day = day;
-		this.customerName = customerName;
+	}
+	getCustomerName(){
+		return this.customerName;
+	}
+	getService(){
+		return this.service;
+	}
+	getHour(){
+		return this.hour;
 	}
 }
 
