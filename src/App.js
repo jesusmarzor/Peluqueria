@@ -26,18 +26,23 @@ class App{
 	}
 	giveAppointment(name, day, hour, service){
         if(day.getDate() >= new Date() && !day.hourReservated(hour)){
-            day['appointments'][hour] = new Appointment(name, service);
+            day.addAppointment(new Appointment(name, service,hour));
         }
     }
 	cancelAppointment(name,day,hour,service){
         if(day.getDate() >= new Date() && day.hourReservated(hour)){
-            if(day['appointments'][hour].getCustomerName() == name && day['appointments'][hour].getService() == service){
-                day['appointments'][hour] = false;
-            }
+			day.getAppointments().map( (appointment,index) => {
+				if(appointment.getCustomerName() == name && appointment.getService() == service && appointment.getHour() == hour){
+					day.cancelAppointment(index);
+				}
+			});
         }
     }
 	getAppointments(day){
 		return day.getAppointments();
+	}
+	getAppointment(day, hour){
+		return day.getAppointment(hour);
 	}
 }
 module.exports = App;
