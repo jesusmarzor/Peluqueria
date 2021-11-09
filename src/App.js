@@ -4,9 +4,8 @@ const Service = require('../../Peluqueria/src/Service');
 const Appointment = require('../../Peluqueria/src/Appointment')
 
 class App{
-
 	constructor(){
-		this.calendar = new Calendar(60);
+		this.calendar = new Calendar(new Date(new Date().getUTCFullYear(),(new Date().getMonth()+1),0).getDate());
 		this.products = [];
 		this.services = [];
 	}
