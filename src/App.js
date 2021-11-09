@@ -50,20 +50,3 @@ class App{
 	}
 }
 
-const app = new App();
-let calendar = app.getCalendar();
-let products = app.getProducts();
-app.addProducts('acondicionador',5,50);
-products.map((p)=>{
-	console.log(p);
-})
-let services = app.getServices();
-app.createServices('corte',[[products[0],15]],8);
-services.map((s)=>{
-	console.log(s);
-})
-app.giveAppointment('Jesus',calendar.getTimetable()[2],'18:00',services[0]);
-app.giveAppointment('Pablo',calendar.getTimetable()[2],'19:30',services[0]);
-app.cancelAppointment('Pablo',calendar.getTimetable()[2],'19:30',services[0]);
-console.log(app.getHours(calendar.getTimetable()[2]));
-
