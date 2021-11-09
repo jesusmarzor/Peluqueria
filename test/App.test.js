@@ -39,4 +39,16 @@ describe('M1 - Sistema de Citas', () => {
         expect(appointmentGiven.getService()).toEqual(services[0]);
         expect(appointmentGiven.getHour()).toEqual(hour);
     })
+    test('Anular cita que no es tuya', () => {
+        app.cancelAppointment('Juan',day,hour,services[0]);
+        let appointmentCancel = app.getAppointment(day,hour);
+        expect(appointmentCancel.getCustomerName()).toBe('Jesus');
+        expect(appointmentCancel.getService()).toEqual(services[0]);
+        expect(appointmentCancel.getHour()).toEqual(hour);
+    })
+    test('Anular cita', () => {
+        app.cancelAppointment('Jesus',day,hour,services[0]);
+        let appointmentCancel = app.getAppointment(day,hour);
+        expect(appointmentCancel).toBe(undefined);
+    })
 })
