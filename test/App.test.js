@@ -22,35 +22,33 @@ describe('M1 - Sistema de Citas', () => {
     })
     test('Pedir cita', () => {
         app.giveAppointment('Jesus',day,hour,services[0]);
-        let appointments = app.getAppointments(day);
-        let appointmentGiven = appointments[hour];
+        let appointmentGiven = app.getAppointment(day,hour);
         expect(appointmentGiven.getCustomerName()).toBe('Jesus');
         expect(appointmentGiven.getService()).toEqual(services[0]);
+        expect(appointmentGiven.getHour()).toEqual(hour);
     })
     test('Pedir cita a una hora que está cerrado', () => {
         app.giveAppointment('Juan',day,'22:00',services[0]);
-        let appointments = app.getAppointments(day);
-        let appointmentGiven = appointments['22:00'];
+        let appointmentGiven = app.getAppointment(day,'22:00');
         expect(appointmentGiven).toBe(undefined);
     })
     test('Pedir cita a una hora que está ocupada', () => {
         app.giveAppointment('Juan',day,hour,services[0]);
-        let appointments = app.getAppointments(day);
-        let appointmentGiven = appointments[hour];
+        let appointmentGiven = app.getAppointment(day,hour);
         expect(appointmentGiven.getCustomerName()).toBe('Jesus');
         expect(appointmentGiven.getService()).toEqual(services[0]);
+        expect(appointmentGiven.getHour()).toEqual(hour);
     })
     test('Anular cita que no es tuya', () => {
         app.cancelAppointment('Juan',day,hour,services[0]);
-        let appointments = app.getAppointments(day);
-        let appointmentCancel = appointments[hour];
+        let appointmentCancel = app.getAppointment(day,hour);
         expect(appointmentCancel.getCustomerName()).toBe('Jesus');
         expect(appointmentCancel.getService()).toEqual(services[0]);
+        expect(appointmentCancel.getHour()).toEqual(hour);
     })
     test('Anular cita', () => {
         app.cancelAppointment('Jesus',day,hour,services[0]);
-        let appointments = app.getAppointments(day);
-        let appointmentCancel = appointments[hour];
-        expect(appointmentCancel).toBe(false);
+        let appointmentCancel = app.getAppointment(day,hour);
+        expect(appointmentCancel).toBe(undefined);
     })
 })
