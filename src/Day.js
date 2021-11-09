@@ -54,3 +54,5 @@ class Day{
 		return this.appointments;
 	}
 }
+
+module.exports = Day;
