@@ -1,7 +1,7 @@
 const Calendar = require('./Calendar');
 const Product = require('./Product');
-const Service = require('../../Peluqueria/src/Service');
-const Appointment = require('../../Peluqueria/src/Appointment')
+const Service = require('./Service');
+const Appointment = require('./Appointment')
 
 class App{
 	constructor(){
@@ -13,10 +13,14 @@ class App{
 		return this.calendar;
 	}
 	addProducts(name,stock,price){
-		this.products.push(new Product(name,stock,price));
+		let product = new Product(name,stock,price)
+		this.products.push(product);
+		return product.getId();
 	}
 	createServices(name,consuption,price){
-		this.services.push(new Service(name,consuption,price));
+		let service = new Service(name,consuption,price);
+		this.services.push(service);
+		return service.getId();
 	}
 	getProducts(){
 		return this.products;
@@ -26,14 +30,15 @@ class App{
 	}
 	giveAppointment(name, day, hour, service){
         if(day.getDate() >= new Date() && !day.hourReservated(hour)){
-            day.addAppointment(new Appointment(name, service,hour));
+            return day.addAppointment(new Appointment(name, service,hour));
         }
     }
-	cancelAppointment(name,day,hour,service){
-        if(day.getDate() >= new Date() && day.hourReservated(hour)){
+	cancelAppointment(day, id){
+        if(day.getDate() >= new Date()){
 			day.getAppointments().map( (appointment,index) => {
-				if(appointment.getCustomerName() == name && appointment.getService() == service && appointment.getHour() == hour){
+				if(appointment.getId() == id){
 					day.cancelAppointment(index);
+					Appointment.setMoneyCollected(appointment.getService().getPrice());
 				}
 			});
         }
@@ -41,8 +46,8 @@ class App{
 	getAppointments(day){
 		return day.getAppointments();
 	}
-	getAppointment(day, hour){
-		return day.getAppointment(hour);
+	getAppointment(day, id){
+		return day.getAppointment(id);
 	}
 }
 module.exports = App;
