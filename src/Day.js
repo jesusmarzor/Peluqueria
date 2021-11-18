@@ -22,7 +22,13 @@ class Day{
 	}
 	hourReservated(hour){
         if(this.work_hours.includes(hour)){
-			if(this.getAppointment(hour) === undefined){
+			let appointmentSelect = undefined;
+			this.appointments.map( appointment => {
+				if(appointment.getHour() === hour){
+					appointmentSelect = appointment;
+				}
+			})
+			if(appointmentSelect === undefined){
 				return false
 			}
         }
@@ -35,10 +41,10 @@ class Day{
 	getDate(){
 		return this.date;
 	}
-	getAppointment(hour){
+	getAppointment(id){
 		let appointmentSelect = undefined;
 		this.appointments.map( appointment => {
-			if(appointment.getHour() === hour){
+			if(appointment.getId() === id){
 				appointmentSelect = appointment;
 			}
 		})
@@ -46,6 +52,7 @@ class Day{
 	}
 	addAppointment(appointment){
 		this.appointments.push(appointment);
+		return appointment.getId();
 	}
 	cancelAppointment(index){
 		this.appointments.splice(index,1);
