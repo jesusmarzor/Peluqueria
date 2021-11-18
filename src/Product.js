@@ -1,8 +1,15 @@
 class Product {
+	static idCounter = 0;
+	static moneySpent = 0;
 	constructor(name, stock, price){
+		this.id = Product.idCounter;
 		this.name = name;
 		this.stock = stock;
-		this.price = price;
+		Product.moneySpent += price;
+		Product.idCounter++;
+	}
+	getId(){
+		return this.id;
 	}
 	getName(){
 		return this.name;
@@ -10,8 +17,8 @@ class Product {
 	getStock(){
 		return this.stock;
 	}
-	getPrice(){
-		return this.price;
+	static getMoneySpent(){
+		return Product.moneySpent;
 	}
 	addQuantity(amount, price){
 		this.stock += amount;
