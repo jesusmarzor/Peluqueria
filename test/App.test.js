@@ -11,7 +11,7 @@ beforeAll(() => {
 
 describe('Clase Producto', () => {
     const id_acondicionador = () => app.addProducts('acondicionador',5,50);
-    
+
     test('Añadir Productos', ()=>{
         let id_product = () => products[0].getId();
         expect(id_acondicionador()).toBe(id_product());
@@ -40,5 +40,12 @@ describe('Clase Appointment', () => {
     })
     test('Pedir cita a una hora que está ocupada', () => {
         expect(id_busy()).toBe(undefined);
+    })
+    test('Anular cita', () => {
+        const cancelAppointment = () => {
+            app.cancelAppointment(day,0)
+            return app.getAppointment(day,0)
+        };
+        expect(cancelAppointment()).toBe(undefined);
     })
 })
