@@ -5,34 +5,40 @@ class Day{
 		this.work_hours = []
 
 		let dayOfTheWeek = date.getDay();
-
-		switch (dayOfTheWeek) {
-			case 1:
-				this.work_hours = ['18:00','18:30','19:00','19:30','20:00','20:30']
-				break;
-				
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-				this.work_hours = ['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','18:00','18:30','19:00','19:30','20:00','20:30'];
-				break;
+		let new_hour;
+		if(dayOfTheWeek !== 7){
+			if(dayOfTheWeek !== 1){
+				for(let i = 9; i <= 13; i++){
+					new_hour = new Date(date.setHours(i,0,0));
+					this.work_hours.push(new_hour);
+					new_hour = new Date(date.setHours(i,30,0));
+					this.work_hours.push(new_hour);
+				}
+			}
+			for(let i = 19; i <= 21; i++){
+				new_hour = new Date(date.setHours(i,0,0));
+				this.work_hours.push(new_hour);
+				new_hour = new Date(date.setHours(i,30,0));
+				this.work_hours.push(new_hour);
+			}
 		}
 	}
 	hourReservated(hour){
-        if(this.work_hours.includes(hour)){
-			let appointmentSelect = undefined;
-			this.appointments.map( appointment => {
-				if(appointment.getHour() === hour){
-					appointmentSelect = appointment;
-				}
-			})
-			if(appointmentSelect === undefined){
-				return false
+		let appointmentSelect = null;
+		this.work_hours.map( (work_hour) => {
+			if(work_hour.getTime() === hour.getTime()){
+				appointmentSelect = undefined;
+				this.appointments.map( appointment => {
+					if(appointment.getHour().getTime() === hour.getTime()){
+						appointmentSelect = appointment;
+					}
+				})
 			}
-        }
-        return true
+		})
+		if(appointmentSelect === undefined){
+			return false
+		}
+		return true;
     }
 	getDateString(){
 		let mes = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
