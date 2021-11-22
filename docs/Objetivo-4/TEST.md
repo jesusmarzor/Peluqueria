@@ -4,10 +4,10 @@
 He escogido [**jest**](https://jestjs.io/es-ES/) como librería para hacer los test de mi proyecto porque tiene una *fácil instalación* y *muy buena documentación* en su página web.
 
 ## Biblioteca de aserciones
-He escogido **Chai.js** porque es el que viene por defecto en *jest* y tiene *comparadores* super sencillos que nos permiten validar los resultados comprobandolo con una expectativa de lo que tendría que salir.
+**Chai.js** es el que viene por defecto en *jest* y tiene *comparadores* super sencillos que nos permiten validar los resultados comprobandolo con una expectativa de lo que tendría que salir.
 
 ## Funcionamiento de la aplicación
-La aplicación funcionara como un calendario, el cliente puede elegir el día libre y el servicio que desea para registrar su cita. El cliente también podría cancelar la cita si en un futuro no podrá asistir.
+La aplicación funcionará como un calendario, el cliente puede elegir el día libre y el servicio que desea para registrar su cita. El cliente también podría cancelar la cita si en un futuro no podrá asistir.
 
 También se llevará a cabo la contabilización de los productos, cuánto queda para agotarse un producto.
 
