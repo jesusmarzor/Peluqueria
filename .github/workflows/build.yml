@@ -22,6 +22,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERENAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: jesusmarzor/Peluqueria
+          repository: jesusmarzor/peluqueria
           tags: latest
           
