@@ -9,7 +9,9 @@
   "scripts": {
     "start": "js src/App.js",
     "check": "node --check src/*",
-    "test": "jest"
+    "test": "jest",
+    "docker-build": "docker build -t jesusmarzor .",
+    "docker-run": "docker run -t -v `pwd`:/app/test jesusmarzor"
   },
   "repository": {
     "type": "git",
