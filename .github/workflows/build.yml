@@ -1,0 +1,27 @@
+name: Publish Docker image
+on:
+  push:
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'Dockerfile'
+    branches:
+      - 'master'
+  
+jobs:
+  build-container:
+    name: Build Docker container image
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Checkout code
+        uses: actions/checkout@v2
+      - 
+        name: Publish to Dockerhub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERENAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: jesusmarzor/Peluqueria
+          tags: latest
+          
