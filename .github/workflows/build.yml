@@ -2,11 +2,11 @@ name: Publish Docker image
 on:
   push:
     paths:
-      - 'package.json'
-      - 'package-lock.json'
-      - 'Dockerfile'
+      - package.json
+      - package-lock.json
+      - Dockerfile
     branches:
-      - 'master'
+      - master
   
 jobs:
   build-container:
