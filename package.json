@@ -1,6 +1,6 @@
 {
   "name": "peluqueria",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "Proyecto para gestionar las citas y el almacen de una peluqueria (IV-21-22)",
   "main": "src/App.js",
   "directories": {
