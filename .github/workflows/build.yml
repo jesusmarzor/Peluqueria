@@ -26,5 +26,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERENAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: jesusmarzor/peluqueria
+          push: true
           tags: latest
           
