@@ -27,3 +27,5 @@ npm run check
 ```
 npm run test
 ```
+### Test
+Leer el apartado de los Test [aquí](./docs/Objetivo-4/TEST.md)

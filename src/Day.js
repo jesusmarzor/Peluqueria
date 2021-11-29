@@ -1,35 +1,71 @@
 class Day{
 	constructor(date){
 		this.date = date;
-		this.hours = {};
-		let dayOfTheWeek = date.getDay();
+		this.appointments = [];
+		this.work_hours = []
 
-		switch (dayOfTheWeek) {
-			case 1:
-				this.hours = {'18:00':false,'18:30':false,'19:00':false,'19:30':false,'20:00':false,'20:30':false}
-				break;
-				
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-				this.hours = {'08:00':false,'08:30':false,'09:00':false,'09:30':false,'10:00':false,'10:30':false,'11:00':false,'11:30':false,'12:00':false,'12:30':false,'18:00':false,'18:30':false,'19:00':false,'19:30':false,'20:00':false,'20:30':false}
-				break;
+		let dayOfTheWeek = date.getDay();
+		let new_hour;
+		if(dayOfTheWeek !== 7){
+			if(dayOfTheWeek !== 1){
+				for(let i = 9; i <= 13; i++){
+					new_hour = new Date(date.setHours(i,0,0));
+					this.work_hours.push(new_hour);
+					new_hour = new Date(date.setHours(i,30,0));
+					this.work_hours.push(new_hour);
+				}
+			}
+			for(let i = 19; i <= 21; i++){
+				new_hour = new Date(date.setHours(i,0,0));
+				this.work_hours.push(new_hour);
+				new_hour = new Date(date.setHours(i,30,0));
+				this.work_hours.push(new_hour);
+			}
 		}
 	}
 	hourReservated(hour){
-        if(!this.hours[hour]){
-            return false
-        }
-        return true
+		let appointmentSelect = null;
+		this.work_hours.map( (work_hour) => {
+			if(work_hour.getTime() === hour.getTime()){
+				appointmentSelect = undefined;
+				this.appointments.map( appointment => {
+					if(appointment.getHour().getTime() === hour.getTime()){
+						appointmentSelect = appointment;
+					}
+				})
+			}
+		})
+		if(appointmentSelect === undefined){
+			return false
+		}
+		return true;
     }
 	getDateString(){
 		let mes = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
         return this.date.getDate() + ' de ' + mes[this.date.getMonth()] + ' de ' + this.date.getFullYear()
     }
-	getHours(){
-		return this.hours;
+	getDate(){
+		return this.date;
+	}
+	getAppointment(id){
+		let appointmentSelect = undefined;
+		this.appointments.map( appointment => {
+			if(appointment.getId() === id){
+				appointmentSelect = appointment;
+			}
+		})
+		return appointmentSelect;
+	}
+	addAppointment(appointment){
+		this.appointments.push(appointment);
+		return appointment.getId();
+	}
+	cancelAppointment(index){
+		this.appointments.splice(index,1);
+	}
+	getAppointments(){
+		return this.appointments;
 	}
 }
+
 module.exports = Day;
