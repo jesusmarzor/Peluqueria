@@ -16,4 +16,4 @@ Gracias a la distro **alpine**, he creado una imagen ligera y con lo necesario p
 
 ## Github Action
 
-He creado un **Github Action** que se encargará de actualizar el contenedor de Docker y subirlo a Dockerhub.
+He creado un **Github Action** que se encargará de actualizar el contenedor de Docker y subirlo a [Dockerhub](https://hub.docker.com/r/jesusmarzor/peluqueria).
