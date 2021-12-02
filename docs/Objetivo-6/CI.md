@@ -12,7 +12,7 @@ Me he informado de que la versión 12 tiene algunos bugs ejecutando jest, he dec
 En el archivo de Travis, ejecuto los test de forma local.
 
 ## Semaphore CI
-Como segundo CI, he escogido [SemaphoreCI](https://semaphoreci.com/) porque comparado con otros CI, su interfaz de usuario es simple e intuitiva. Además de esto, ofrece una integración muy buena con Github hasta tal punto que puedes ver, al igual que con Travis-CI, en cada commit si ha pasado los test o no.
+Como segundo CI, he escogido [SemaphoreCI](https://semaphoreci.com/) porque gracias a los recursos de hardware dedicados puede procesar más rápido que los productos de la competencia y oferce ejecución de pruebas en paralelo. Comparado con otros CI, su interfaz de usuario es simple e intuitiva. Además de esto, ofrece una integración muy buena con Github hasta tal punto que puedes ver, al igual que con Travis-CI, en cada commit si ha pasado los test o no.
 
 Desde la propia web, puedes observar como se van ejecutando los test y si quieres modificar el fichero *.yml*, puedes hacerlo desde ahí y hacer un push en la rama donde se encuentra el fichero o crear una rama nueva.
 
