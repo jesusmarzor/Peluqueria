@@ -27,5 +27,20 @@ npm run check
 ```
 npm run test
 ```
+
+- **Docker build**
+```
+npm run docker-build
+```
+
+- **Docker run**
+```
+npm run docker-run
+```
+
+
 ### Test
 Leer el apartado de los Test [aquí](./docs/Objetivo-4/TEST.md)
+
+### Docker
+Leer el apartado del contenedor para realizar los test [aquí](./docs/Objetivo-5/DOCKER.md)

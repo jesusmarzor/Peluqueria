@@ -1,6 +1,6 @@
 {
   "name": "peluqueria",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "Proyecto para gestionar las citas y el almacen de una peluqueria (IV-21-22)",
   "main": "src/App.js",
   "directories": {
@@ -9,7 +9,9 @@
   "scripts": {
     "start": "js src/App.js",
     "check": "node --check src/*",
-    "test": "jest"
+    "test": "jest",
+    "docker-build": "docker build -t jesusmarzor .",
+    "docker-run": "docker run -t -v `pwd`:/app/test jesusmarzor"
   },
   "repository": {
     "type": "git",
