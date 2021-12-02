@@ -6,21 +6,10 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: Correr docker
+  - name: Docker
     task:
       jobs:
-        - name: Correr docker
+        - name: Correr Test
           commands:
             - checkout
-            - docker run -t -v `pwd`:/app/test jesusmarzor/peluqueria
-
-  - name: Tests
-    task:
-      prologue:
-        commands:
-          - checkout
-          - cache restore
-      jobs:
-        - name: Everything
-          commands:
-            - npm run docker-run
+            - docker run -t -v `pwd`:/app/test jesusmarzor/peluqueria:latest
