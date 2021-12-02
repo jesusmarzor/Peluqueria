@@ -5,4 +5,4 @@ automatizar:
     fichero: package.json
     orden: npm run
 test: test/App.test.js
-
+CI: .semaphore/semaphore.yml
