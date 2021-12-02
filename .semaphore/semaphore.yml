@@ -1,15 +1,15 @@
 version: v1.0
-name: Semaphore
+name: Ejecucion de los test
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 
 blocks:
-  - name: Docker
+  - name: Contenedor Dockerhub
     task:
       jobs:
-        - name: Correr Test
+        - name: Lanzar test
           commands:
             - checkout
             - docker run -t -v `pwd`:/app/test jesusmarzor/peluqueria:latest
