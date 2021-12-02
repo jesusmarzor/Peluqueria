@@ -1,20 +1,18 @@
 version: v1.0
-name: First pipeline example
+name: Semaphore
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 
 blocks:
-  - name: Install dependencies
+  - name: Correr docker
     task:
       jobs:
-        - name: npm install and cache
+        - name: Correr docker
           commands:
             - checkout
-            - cache restore
-            - npm ci
-            - cache store
+            - docker run -t -v `pwd`:/app/test jesusmarzor/peluqueria
 
   - name: Tests
     task:
@@ -25,4 +23,4 @@ blocks:
       jobs:
         - name: Everything
           commands:
-            - npm run test
+            - npm run docker-run
