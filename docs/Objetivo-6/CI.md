@@ -12,8 +12,8 @@ Me he informado de que la versión 12 tiene algunos bugs ejecutando jest, he dec
 En el archivo de Travis, ejecuto los test de forma local.
 
 ## Semaphore CI
-Como segundo CI, he escogido [SemaphoreCI](https://semaphoreci.com/) porque gracias a los recursos de hardware dedicados puede procesar más rápido que los productos de la competencia y oferce ejecución de pruebas en paralelo. Comparado con otros CI, su interfaz de usuario es simple e intuitiva. Además de esto, ofrece una integración muy buena con Github hasta tal punto que puedes ver, al igual que con Travis-CI, en cada commit si ha pasado los test o no.
+Como segundo CI, he escogido [SemaphoreCI](https://semaphoreci.com/). Quería elegir un CI que se pueda integrar de manera fácil con github y que me ejecute los test muy rápido. Este CI me ha sorprendido ya que he realizado varios test y los tiempos de ejecución han sido: 0.15s, 0.20s, 0.16s, 0.18s, 0.17s. Comparado con el CI anterior, este ha llegado a ejecutarse en la mitad de tiempo. Antes de probarlo me había informado de su rapidez en su página web mencionada anteriormente. Allí se habla de que esto se debe a sus recursos de hardware dedicados y sus pruebas en paralelo.
 
-Desde la propia web, puedes observar como se van ejecutando los test y si quieres modificar el fichero *.yml*, puedes hacerlo desde ahí y hacer un push en la rama donde se encuentra el fichero o crear una rama nueva.
+Por otro lado, tambien he realizado los test en [CircleCI](https://circleci.com/) pero los tiempos de ejecución no han sido muy buenos ya que rondan los 0.40s y 0.60s. Por este motivo me decanté por **semaphore** ya que sus tiempos de ejecución me dejaron muy impresionado y agradecido.
 
 En el archivo de Semaphore, ejecuto docker utilizando la imagen que subimos a Dockerhub en el objetivo anterior.
