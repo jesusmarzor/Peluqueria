@@ -1,0 +1,16 @@
+version: 2.1
+
+jobs:
+  docker:
+    machine:
+      image: ubuntu-2004:202010-01
+    steps:
+      - checkout
+      - run:
+          name: Ejecutar tests
+          command: docker run -e LOG_DIR=$LOG_DIR -e LOG_FILE=$LOG_FILE -t -v `pwd`:/app/test jesusmarzor/peluqueria
+
+workflows:
+  tests:
+    jobs:
+      - docker
