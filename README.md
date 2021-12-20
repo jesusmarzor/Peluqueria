@@ -44,3 +44,7 @@ Leer el apartado de los Test [aquí](./docs/Objetivo-4/TEST.md)
 
 ### Docker
 Leer el apartado del contenedor para realizar los test [aquí](./docs/Objetivo-5/DOCKER.md)
+
+
+### CI
+Leer el apartado de integración continua [aquí](./docs/Objetivo-6/CI.md)
