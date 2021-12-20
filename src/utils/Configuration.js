@@ -13,7 +13,7 @@ class Configuration {
     }
     (async () => this.logFile = await client.get('LOG_FILE').string().catch( err => console.log('Log_File', err.message)))();
     if(this.logFile === null){
-      this.logFile ??= (process.env.LOG_FILE || 'file.log');
+      this.logFile = (process.env.LOG_FILE || 'file.log');
     }
 	}
 
