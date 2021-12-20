@@ -8,9 +8,13 @@ class Configuration {
     this.logDir = null;
     this.logFile = null;
 		(async () => this.logDir = await client.get('LOG_DIR').string().catch( err => console.log('Log_Dir', err.message)))();
-    this.logDir ??= (process.env.LOG_DIR || 'tmp/logs/peluqueria/');
+    if(this.logDir === null){
+      this.logDir = (process.env.LOG_DIR || 'tmp/logs/peluqueria/');
+    }
     (async () => this.logFile = await client.get('LOG_FILE').string().catch( err => console.log('Log_File', err.message)))();
-    this.logFile ??= (process.env.LOG_FILE || 'file.log');
+    if(this.logFile === null){
+      this.logFile ??= (process.env.LOG_FILE || 'file.log');
+    }
 	}
 
   getLogDir(){
