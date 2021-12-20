@@ -1,6 +1,6 @@
 const App = require('../src/App');
-const Product = require('../src/Product');
-const Appointment = require('../src/Appointment')
+const Product = require('../src/models/Product');
+const Appointment = require('../src/models/Appointment')
 
 beforeAll(() => {
     app = new App();
@@ -10,6 +10,10 @@ beforeAll(() => {
     hour = new Date(day.date.setHours(19,0,0));
     products = app.getProducts();
 })
+
+afterAll(async () => {
+    await new Promise(resolve => setTimeout(() => resolve(), 1000));
+});
 
 describe('Clase Producto', () => {
     const id_acondicionador = () => app.addProducts('acondicionador',5,50);
