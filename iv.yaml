@@ -6,3 +6,4 @@ automatizar:
     orden: npm run
 test: test/App.test.js
 CI: .semaphore/semaphore.yml
+configuracion: src/utils/Configuration.js
