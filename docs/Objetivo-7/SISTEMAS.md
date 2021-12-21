@@ -1,4 +1,4 @@
-# Servicios de registros de logs y configuración
+# Servicios de registros de logs y configuración remota
 
 ## Servicio de registros de logs
 
