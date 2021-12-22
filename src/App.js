@@ -19,7 +19,7 @@ class App{
 		if(product){
 			logger.info('Se ha creado el producto ' + product.getId());
 		}else{
-			logger.info('No se ha podido crear el producto ' + name);
+			logger.error('No se ha podido crear el producto ' + name);
 		}
 		return product.getId();
 	}
@@ -29,7 +29,7 @@ class App{
 		if(service){
 			logger.info('Se ha creado el servicio ' + service.getId());
 		}else{
-			logger.info('No se ha podido crear el servicio ' + name);
+			logger.error('No se ha podido crear el servicio ' + name);
 		}
 		return service.getId();
 	}
