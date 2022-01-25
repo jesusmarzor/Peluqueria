@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "js src/App.js",
+    "start": "node src/models/App.js",
     "check": "node --check src/*",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "docker-build": "docker build -t jesusmarzor .",
     "docker-run": "docker run -t -v `pwd`:/app/test jesusmarzor"
   },
@@ -25,5 +25,10 @@
   "homepage": "https://github.com/jesusmarzor/Peluqueria#readme",
   "devDependencies": {
     "jest": "^27.3.1"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "etcd3": "^1.1.0",
+    "winston": "^3.3.3"
   }
 }

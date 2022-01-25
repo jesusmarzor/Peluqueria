@@ -12,4 +12,4 @@ blocks:
         - name: Lanzar test
           commands:
             - checkout
-            - docker run -t -v `pwd`:/app/test jesusmarzor/peluqueria:latest
+            - docker run -e LOG_DIR=$LOG_DIR -e LOG_FILE=$LOG_FILE -t -v `pwd`:/app/test jesusmarzor/peluqueria:latest
